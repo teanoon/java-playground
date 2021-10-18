@@ -1,0 +1,27 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.202.3/containers/java
+{
+	"name": "Java Playground",
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
+  "extensions": [
+    "vscjava.vscode-java-pack",
+    "k--kato.intellij-idea-keybindings",
+    "gabrielbb.vscode-lombok",
+    "pivotal.vscode-spring-boot",
+    "streetsidesoftware.code-spell-checker",
+    "hediet.vscode-drawio",
+    "humao.rest-client",
+    "visualstudioexptteam.vscodeintellicode",
+    "yzhang.markdown-all-in-one"
+  ],
+  "settings": {
+    "terminal.integrated.profiles.linux": {
+      "bash": {
+        "path": "bash"
+      }
+    },
+    "terminal.integrated.defaultProfile.linux": "bash"
+  }
+}
