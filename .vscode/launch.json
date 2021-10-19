@@ -16,6 +16,14 @@
             "request": "launch",
             "mainClass": "com.example.hash.Application",
             "projectName": "consistent-hash"
+        },
+        {
+            "type": "java",
+            "name": "Launch HotSwap Application",
+            "request": "launch",
+            "mainClass": "com.example.hotswap.Application",
+            "vmArgs": "-XX:HotswapAgent=core",
+            "projectName": "hot-swap"
         }
     ]
 }
