@@ -23,5 +23,10 @@
       }
     },
     "terminal.integrated.defaultProfile.linux": "bash"
-  }
+  },
+  "mounts": [
+    "source=vscode-java-extensions,target=/home/gradle/.vscode-server/extensions,type=volume",
+    "source=vscode-java-gradle,target=/home/gradle/.gradle,type=volume",
+    "source=vscode-java-maven,target=/home/gradle/.maven,type=volume"
+  ]
 }
