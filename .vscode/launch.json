@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Graphql Application",
+            "request": "launch",
+            "mainClass": "com.example.graphql.Application",
+            "projectName": "graphql"
+        },
+        {
+            "type": "java",
             "name": "Launch Current File",
             "request": "launch",
             "mainClass": "${file}"

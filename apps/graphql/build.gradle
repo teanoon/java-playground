@@ -1,0 +1,41 @@
+plugins {
+    id 'org.springframework.boot' version '2.5.4'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'java'
+}
+
+group = 'com.example.graphql'
+
+repositories {
+    mavenCentral()
+}
+
+configurations {
+    all*.exclude module:'spring-boot-starter-logging'
+}
+
+dependencies {
+    implementation 'com.google.guava:guava:30.1.1-jre'
+    implementation 'com.graphql-java:graphql-java:11.0'
+    implementation 'com.graphql-java:graphql-java-spring-boot-starter-webmvc:1.0'
+    implementation 'io.github.graphql-java:graphql-java-annotations:9.1'
+    implementation 'io.projectreactor:reactor-core'
+    implementation 'org.apache.commons:commons-lang3'
+    implementation 'org.hibernate:hibernate-core'
+    implementation 'org.hibernate.validator:hibernate-validator'
+    implementation 'org.springframework.boot:spring-boot-starter-log4j2'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.data:spring-data-jpa'
+
+    runtimeOnly 'com.h2database:h2'
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+}
+
+tasks.named('test') {
+    // Use JUnit Platform for unit tests.
+    useJUnitPlatform()
+}
