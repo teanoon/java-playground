@@ -6,31 +6,16 @@
     "configurations": [
         {
             "type": "java",
-            "name": "Launch Graphql Application",
+            "name": "Launch Product Api",
             "request": "launch",
-            "mainClass": "com.example.graphql.Application",
-            "projectName": "graphql"
+            "mainClass": "com.example.product.Application",
+            "projectName": "product-service"
         },
         {
             "type": "java",
             "name": "Launch Current File",
             "request": "launch",
             "mainClass": "${file}"
-        },
-        {
-            "type": "java",
-            "name": "Launch Consistent Hash Application",
-            "request": "launch",
-            "mainClass": "com.example.hash.Application",
-            "projectName": "consistent-hash"
-        },
-        {
-            "type": "java",
-            "name": "Launch HotSwap Application",
-            "request": "launch",
-            "mainClass": "com.example.hotswap.Application",
-            "vmArgs": "-XX:HotswapAgent=core",
-            "projectName": "hot-swap"
         }
     ]
 }

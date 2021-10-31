@@ -8,3 +8,4 @@
  */
 
 rootProject.name = 'graphql'
+include('graphql-starter', 'product-service')

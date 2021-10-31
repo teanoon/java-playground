@@ -1,0 +1,13 @@
+plugins {
+    id 'com.example.graphql.java-application-conventions'
+}
+
+dependencies {
+    implementation project(':graphql-starter')
+
+    implementation 'org.hibernate:hibernate-core'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.data:spring-data-jpa'
+
+    runtimeOnly 'com.h2database:h2'
+}

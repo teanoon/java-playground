@@ -4,16 +4,15 @@
         "java",
         "javax",
         "com",
+        "graphql",
         "io",
         "lombok",
         "net",
         "org",
         "reactor",
         "redis",
-        "com.lagou",
         "com.example",
         "#",
-        "#com.lagou",
         "#com.example"
     ],
     "java.configuration.updateBuildConfiguration": "automatic",
@@ -22,7 +21,8 @@
     "java.saveActions.organizeImports": true,
     "java.configuration.checkProjectSettingsExclusions": false,
     "java.import.exclusions": [
-        "**/db/**",
+        "**/apps/consistent-hash",
+        "**/apps/hot-swap"
     ],
     "java.completion.favoriteStaticMembers": [
         "org.hamcrest.Matchers.*",
@@ -36,7 +36,11 @@
         "org.mockito.Mockito.*",
         "org.mockito.ArgumentMatchers.*",
         "org.mockito.Answers.*",
-        "java.util.concurrent.ThreadLocalRandom.current"
+        "java.util.concurrent.ThreadLocalRandom.current",
+        "graphql.Scalars.*",
+        "graphql.schema.GraphQLFieldDefinition.*",
+        "graphql.schema.GraphQLObjectType.*",
+        "graphql.schema.idl.RuntimeWiring.*",
     ],
     "files.exclude": {
         "**/.git": true,
@@ -46,14 +50,7 @@
         "**/.DS_Store": true,
         "**/.gradle": true,
         "**/build": true,
-        "**/bin": true,
-        "open-source/**": true,
-        "S01E*/**": true,
-        "S02E*/**": true,
-        "S03E*/**": true,
-        "S04E*/**": true,
-        "S05E*/**": true,
-        "S07E*/**": true
+        "**/bin": true
     },
     "cSpell.words": [
         "Amqp",
