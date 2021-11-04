@@ -6,6 +6,21 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Application",
+            "request": "launch",
+            "mainClass": "com.example.jvm.Application",
+            "projectName": "jvm"
+        },
+        {
+            "type": "java",
+            "name": "Launch Jvm App",
+            "request": "launch",
+            "mainClass": "com.example.jvm.App",
+            "projectName": "jvm",
+            "vmArgs": "-Xmx10m -Xms10m -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=apps/jvm/build/oom/oom.hprof"
+        },
+        {
+            "type": "java",
             "name": "Launch Product Api",
             "request": "launch",
             "mainClass": "com.example.product.Application",
