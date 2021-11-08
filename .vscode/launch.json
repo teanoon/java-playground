@@ -6,18 +6,11 @@
     "configurations": [
         {
             "type": "java",
-            "name": "Launch Application",
-            "request": "launch",
-            "mainClass": "com.example.jvm.Application",
-            "projectName": "jvm"
-        },
-        {
-            "type": "java",
             "name": "Launch Jvm App",
             "request": "launch",
-            "mainClass": "com.example.jvm.App",
+            "mainClass": "com.example.jvm.Application",
             "projectName": "jvm",
-            "vmArgs": "-Xmx10m -Xms10m -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=apps/jvm/build/oom/oom.hprof"
+            "vmArgs": "-Xmx256m -Xms256m -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=1089 -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false"
         },
         {
             "type": "java",

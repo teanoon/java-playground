@@ -21,6 +21,7 @@
     "java.saveActions.organizeImports": true,
     "java.configuration.checkProjectSettingsExclusions": false,
     "java.import.exclusions": [
+        "**/.bin/**",
         "**/apps/consistent-hash",
         "**/apps/hot-swap",
         "**/apps/graphql"

@@ -5,6 +5,9 @@
 	"build": {
 		"dockerfile": "Dockerfile"
 	},
+  "runArgs": [
+    "--name=java-playground"
+  ],
   "extensions": [
     "vscjava.vscode-java-pack",
     "k--kato.intellij-idea-keybindings",
