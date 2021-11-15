@@ -5,6 +5,7 @@ import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
 import java.util.Base64;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicLong;
 
 import javax.crypto.BadPaddingException;
 import javax.crypto.Cipher;
@@ -19,7 +20,8 @@ import reactor.core.publisher.Mono;
 public class Application {
 
     public static void main(String[] args) {
-        Flux.range(0, Integer.MAX_VALUE)
+        var start = new AtomicLong(System.currentTimeMillis());
+        Flux.range(0, 1_000_000)
             .flatMap(index -> Mono.fromSupplier(() -> {
                 try {
                     var key = generateKey(128);
@@ -30,7 +32,10 @@ public class Application {
             }))
             .buffer(100_000)
             .map(List::size)
-            .doOnNext(batchSize -> System.out.println(batchSize + " done"))
+            .doOnNext(batchSize -> {
+                System.out.println(System.currentTimeMillis() - start.get());
+                start.set(System.currentTimeMillis());
+            })
             .blockLast();
     }
 

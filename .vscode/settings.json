@@ -101,6 +101,15 @@
         "varchar",
         "webflux"
     ],
+    "cSpell.ignorePaths": [
+        "package-lock.json",
+        "node_modules",
+        "vscode-extension",
+        ".git/objects",
+        ".vscode",
+        ".vscode-insiders",
+        "notes/jvm/gc.md"
+    ],
     "java.dependency.syncWithFolderExplorer": false,
     "yaml.format.enable": true,
     "yaml.completion": true

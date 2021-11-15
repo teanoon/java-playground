@@ -6,18 +6,19 @@
     "configurations": [
         {
             "type": "java",
-            "name": "Launch Jvm App",
+            "name": "Launch Application",
             "request": "launch",
             "mainClass": "com.example.jvm.Application",
             "projectName": "jvm",
-            "vmArgs": "-Xmx256m -Xms256m -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=1089 -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false"
+            "vmArgs": "-Xlog:safepoint,gc*=info"
         },
         {
             "type": "java",
-            "name": "Launch Product Api",
+            "name": "Launch Jvm Big Object Allocation",
             "request": "launch",
-            "mainClass": "com.example.product.Application",
-            "projectName": "product-service"
+            "mainClass": "com.example.jvm.BigObjectAllocation",
+            "projectName": "jvm",
+            "vmArgs": "-Xms20M -Xmx20M -Xmn10M -Xlog:safepoint,gc*=info"
         },
         {
             "type": "java",
