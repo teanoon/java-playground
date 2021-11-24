@@ -20,11 +20,11 @@ import reactor.core.publisher.Mono;
 public class Application {
 
     public static void main(String[] args) {
-        var start = new AtomicLong(System.currentTimeMillis());
-        Flux.range(0, 1_000_000)
+        AtomicLong start = new AtomicLong(System.currentTimeMillis());
+        Flux.range(0, Integer.MAX_VALUE)
             .flatMap(index -> Mono.fromSupplier(() -> {
                 try {
-                    var key = generateKey(128);
+                    SecretKey key = generateKey(128);
                     return encrypt("input" + index, key);
                 } catch (Exception ignored) {
                     return null;
@@ -50,7 +50,7 @@ public class Application {
     }
 
     private static SecretKey generateKey(int n) throws NoSuchAlgorithmException {
-        var keyGenerator = KeyGenerator.getInstance("AES");
+        KeyGenerator keyGenerator = KeyGenerator.getInstance("AES");
         keyGenerator.init(n);
         return keyGenerator.generateKey();
     }
